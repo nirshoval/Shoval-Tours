@@ -39,20 +39,20 @@
 // export const appConfig = new DevAppConfig();
 // export const appConfig = new ProdAppConfig();
 
-const BASE_URL = (import.meta as any).env?.VITE_API_URL || "http://localhost:4000";
+const BASE_URL = import.meta.env.VITE_API_URL ?? "http://localhost:4000";
 
 class AppConfig {
-  public readonly registerUrl              = `${BASE_URL}/api/register/`;
-  public readonly loginUrl                 = `${BASE_URL}/api/login/`;
-  public readonly vacationsUrl             = `${BASE_URL}/api/vacations/`;
-  public readonly singleVacationUrl        = `${BASE_URL}/api/vacations/single/`;
-  public readonly activeVacationUrl        = `${BASE_URL}/api/vacations/active/`;
-  public readonly futureVacationUrl        = `${BASE_URL}/api/vacations/future/`;
-  public readonly likedVacationByUserUrl   = `${BASE_URL}/api/vacations/liked-vacations-by-user/`;
-  public readonly vacationImageUrl         = `${BASE_URL}/api/vacations/images/`;
-  public readonly likeUrl                  = `${BASE_URL}/api/likes/`;
-  public readonly reportUrl                = `${BASE_URL}/api/reports/count-vacations-likes/`;
-  public readonly reportCsvUrl             = `${BASE_URL}/api/reports/export-to-csv/`;
+    public readonly registerUrl = `${BASE_URL}/api/register/`;
+    public readonly loginUrl = `${BASE_URL}/api/login/`;
+    public readonly vacationsUrl = `${BASE_URL}/api/vacations/`;
+    public readonly singleVacationUrl = `${BASE_URL}/api/vacations/single/`;
+    public readonly activeVacationUrl = `${BASE_URL}/api/vacations/active/`;
+    public readonly futureVacationUrl = `${BASE_URL}/api/vacations/future/`;
+    public readonly likedVacationByUserUrl = `${BASE_URL}/api/vacations/liked-vacations-by-user/`;
+    public readonly vacationImageUrl = `${BASE_URL}/api/vacations/images/`;
+    public readonly likeUrl = `${BASE_URL}/api/likes/`;
+    public readonly reportUrl = `${BASE_URL}/api/reports/count-vacations-likes/`;
+    public readonly reportCsvUrl = `${BASE_URL}/api/reports/export-to-csv/`;
 }
 
 export const appConfig = new AppConfig();
