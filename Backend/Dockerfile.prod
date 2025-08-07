@@ -1,0 +1,34 @@
+# First image for the compilation stage: 
+FROM node:20-alpine3.19 AS compilation-stage
+
+# Installing compiler: 
+RUN npm i -g typescript
+
+WORKDIR /tmp
+
+COPY package.json /tmp
+
+RUN npm i
+
+COPY . /tmp
+
+RUN tsc
+
+COPY src/1-assets/images /tmp/build/1-assets/images
+
+# ----------------------------------------------------
+
+# Second image for the production stage:
+FROM node:20-alpine3.19 AS production-stage
+
+WORKDIR /app
+
+COPY --from=compilation-stage /tmp/package.json /app
+COPY --from=compilation-stage /tmp/.env /app
+COPY --from=compilation-stage /tmp/build /app
+
+RUN npm i --omit=dev
+
+# ----------------------------------------------------
+
+ENTRYPOINT node /app/app.js

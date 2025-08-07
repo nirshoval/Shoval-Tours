@@ -1,0 +1,7 @@
+node_modules
+Dockerfile
+Vacations.postman_collection.json
+Development.postman_environment.json
+Docker.postman_environment.json
+tests
+errors.log
