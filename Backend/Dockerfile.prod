@@ -24,7 +24,7 @@ FROM node:20-alpine3.19 AS production-stage
 WORKDIR /app
 
 COPY --from=compilation-stage /tmp/package.json /app
-COPY --from=compilation-stage /tmp/.env /app
+# COPY --from=compilation-stage /tmp/.env /app
 COPY --from=compilation-stage /tmp/build /app
 
 RUN npm i --omit=dev
