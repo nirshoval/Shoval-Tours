@@ -65,7 +65,7 @@ class App {
         await dal.connect(); // Connect to MongoDB
 
         // Run server on HTTP port 4000:
-        const port = process.env.PORT || appConfig.port;
+        const port = process.env.PORT || 4000;
 
         this.server.listen(port, () => { console.log("Listening on http://localhost:" + port) });
 

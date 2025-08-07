@@ -5,9 +5,9 @@ WORKDIR /app
 COPY package.json /app
 RUN npm i
 COPY . /app
+EXPOSE 4000 
 
 # -------------------------------------------------------------------------------
 
 # When container starts,  Which terminal command runs the app:
-ENTRYPOINT npm start
-
+CMD ["npm", "start"]
