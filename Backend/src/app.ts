@@ -51,6 +51,11 @@ class App {
         // Middleware for client IP address
         this.server.use(requestIp.mw());
 
+        // Health check endpoint for Render:
+        this.server.get("/healthz", (_req, res) => {
+            res.status(200).send("OK");
+        });
+
         // Tell upload-file-saver library where is the default images folder:
         fileSaver.config(path.join(__dirname, "1-assets", "images"));
 
