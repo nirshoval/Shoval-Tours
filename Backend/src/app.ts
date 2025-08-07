@@ -59,13 +59,17 @@ class App {
 
         // Register error middleware:
         this.server.use(errorMiddleware.routeNotFound);
-        
+
         this.server.use(errorMiddleware.catchAll);
 
         await dal.connect(); // Connect to MongoDB
 
         // Run server on HTTP port 4000:
-        this.server.listen(appConfig.port, () => console.log("Listening on http://localhost:" + appConfig.port));
+        const port = process.env.PORT || appConfig.port;
+
+        this.server.listen(port, () => { console.log("Listening on http://localhost:" + port) });
+
+        // this.server.listen(appConfig.port, () => console.log("Listening on http://localhost:" + appConfig.port));
     }
 }
 
