@@ -22,6 +22,8 @@ class App {
 
     public async start(): Promise<void> {
 
+        console.log("App starting...");
+
         // Prevent DOS attacks:
         this.server.use(rateLimit({
             windowMs: 1000,
@@ -66,6 +68,7 @@ class App {
 
         // Run server on HTTP port 4000:
         const port = process.env.PORT || 4000;
+        console.log("Listening on port:", port);
 
         this.server.listen(port, () => { console.log("Listening on http://localhost:" + port) });
 
