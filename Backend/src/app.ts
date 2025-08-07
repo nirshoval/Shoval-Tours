@@ -52,9 +52,9 @@ class App {
         this.server.use(requestIp.mw());
 
         // Health check endpoint for Render:
-        this.server.get("/healthz", (_req, res) => {
-            res.status(200).send("OK");
-        });
+        this.server.get("/", (_req, res) => {res.status(200).send("Shoval Tours API is alive")});
+        this.server.get("/health", (_req, res) => {res.status(200).json({ ok: true })});
+        this.server.get("/healthz", (_req, res) => { res.status(200).send("OK")});
 
         // Tell upload-file-saver library where is the default images folder:
         fileSaver.config(path.join(__dirname, "1-assets", "images"));
