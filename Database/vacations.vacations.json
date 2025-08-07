@@ -1,0 +1,315 @@
+[{
+  "_id": {
+    "$oid": "6815f0e1fe84794852e360fe"
+  },
+  "destination": "Paris, France",
+  "description": "Explore the city of lights and romance. Enjoy croissants by the Seine, world-famous art at the Louvre, and the Eiffel Tower by night. Visit Montmartre’s art-filled alleys and enjoy sunset picnics at the Champ de Mars.",
+  "startDate": {
+    "$date": "2025-07-15T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-07-22T00:00:00.000Z"
+  },
+  "price": 500,
+  "imageName": "da32ba5f-608d-41e6-b187-bc34743b3b50.jpg"
+},
+{
+  "_id": {
+    "$oid": "6815f2f2fe84794852e36108"
+  },
+  "destination": "Rome, Italy",
+  "description": "Discover ancient ruins like the Colosseum, enjoy authentic pasta in Trastevere, and throw a coin into the Trevi Fountain. Marvel at Vatican treasures and indulge in the city’s gelato culture.",
+  "startDate": {
+    "$date": "2025-07-17T03:57:36.221Z"
+  },
+  "endDate": {
+    "$date": "2025-07-24T03:57:36.221Z"
+  },
+  "price": 400,
+  "imageName": "d65fcf25-109c-4ab8-a12f-b425e2b46c5e.jpg"
+},
+{
+  "_id": {
+    "$oid": "6815f3e9fe84794852e3610a"
+  },
+  "destination": "Barcelona, Spain",
+  "description": "Experience Gaudí’s architecture, walk along La Rambla, and relax on the sunny beaches of Barceloneta. Enjoy a memorable stay filled with culture, scenery, and unique local experiences. Savor tapas in Gothic Quarter taverns and admire the Sagrada Familia’s towering spires.",
+  "startDate": {
+    "$date": "2025-07-18T03:57:36.221Z"
+  },
+  "endDate": {
+    "$date": "2025-07-24T03:57:36.221Z"
+  },
+  "price": 700,
+  "imageName": "2a7e1398-c860-4c0e-a7f0-8f8078da58d0.jpg"
+},
+{
+  "_id": {
+    "$oid": "6815f445fe84794852e3610c"
+  },
+  "destination": "Tokyo, Japan",
+  "description": "Dive into the perfect blend of tradition and technology, from ancient temples to futuristic shopping in Shibuya. Enjoy a memorable stay filled with culture, scenery, and unique local experiences. Try sushi at Tsukiji Market and soak in traditional onsen baths.",
+  "startDate": {
+    "$date": "2025-09-09T21:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-09-19T21:00:00.000Z"
+  },
+  "price": 1500,
+  "imageName": "a46321b6-aa05-4aa5-8973-0a3fbf4aa0d9.jpg"
+},
+{
+  "_id": {
+    "$oid": "6815f4bdfe84794852e36111"
+  },
+  "destination": " New York City, USA",
+  "description": "The city that never sleeps awaits you with Broadway shows, Central Park strolls, and iconic skyline views. Enjoy a memorable stay filled with culture, scenery, and unique local experiences. Explore hidden speakeasies, rooftop bars, and world-class museums.",
+  "startDate": {
+    "$date": "2025-07-02T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-07-16T00:00:00.000Z"
+  },
+  "price": 1000,
+  "imageName": "633c4878-eb24-4e9d-9083-50ac5d565ebe.jpg"
+},
+{
+  "_id": {
+    "$oid": "6815f539fe84794852e36113"
+  },
+  "destination": "Amsterdam, Netherlands",
+  "description": "Canals, bikes, tulips, and a rich cultural heritage — visit the Van Gogh Museum and vibrant street markets. Enjoy a memorable stay filled with culture, scenery, and unique local experiences. Cruise the canals at twilight and explore the Anne Frank House.",
+  "startDate": {
+    "$date": "2025-04-29T21:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-06T00:00:00.000Z"
+  },
+  "price": 650,
+  "imageName": "a82380c4-9f82-4c7a-86e1-0b6f0132b960.jpg"
+},
+{
+  "_id": {
+    "$oid": "6815f56ffe84794852e36115"
+  },
+  "destination": "Prague, Czech Republic",
+  "description": "Walk through a fairy tale city full of Gothic spires, medieval squares, and charming cafés. Enjoy a memorable stay filled with culture, scenery, and unique local experiences. Watch the Astronomical Clock strike and cross the historic Charles Bridge.",
+  "startDate": {
+    "$date": "2025-06-01T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-06-06T00:00:00.000Z"
+  },
+  "price": 300,
+  "imageName": "fe6db12e-94f7-4069-b739-295c677128f9.jpg"
+},
+{
+  "_id": {
+    "$oid": "6815f5ecfe84794852e36117"
+  },
+  "destination": "Bangkok, Thailand",
+  "description": "Exotic temples, floating markets, sizzling street food, and vibrant nightlife scenes await you. Enjoy a memorable stay filled with culture, scenery, and unique local experiences. Hop on a tuk-tuk, visit the Grand Palace, and take a boat along the Chao Phraya River.",
+  "startDate": {
+    "$date": "2025-11-10T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-11-28T00:00:00.000Z"
+  },
+  "price": 1800,
+  "imageName": "f2a6f33f-b60e-4857-9230-e3b0517873fe.jpg"
+},
+{
+  "_id": {
+    "$oid": "6815f63dfe84794852e36119"
+  },
+  "destination": "Lisbon, Portugal",
+  "description": "Sunny hills, historic trams, beautiful viewpoints, and delicious pastel de nata pastries. Enjoy a memorable stay filled with culture, scenery, and unique local experiences. Ride the iconic tram 28 through Alfama and enjoy fresh seafood by the river.",
+  "startDate": {
+    "$date": "2025-07-17T03:57:36.221Z"
+  },
+  "endDate": {
+    "$date": "2025-07-24T03:57:36.221Z"
+  },
+  "price": 900,
+  "imageName": "1008bf6a-2135-4379-aa09-929ccc68a817.jpg"
+},
+{
+  "_id": {
+    "$oid": "6815f691fe84794852e3611b"
+  },
+  "destination": "Vienna, Austria",
+  "description": "Classical music concerts, majestic palaces, and elegant Viennese cafés with sachertorte and coffee. Enjoy a memorable stay filled with culture, scenery, and unique local experiences. Visit the Schönbrunn Palace and attend a live Mozart concert.",
+  "startDate": {
+    "$date": "2025-06-22T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-07-02T00:00:00.000Z"
+  },
+  "price": 350,
+  "imageName": "ab87cb8f-7676-48ec-879d-00d7a9b80cbd.jpg"
+},
+{
+  "_id": {
+    "$oid": "6815f6d1fe84794852e3611d"
+  },
+  "destination": "Bali, Indonesia",
+  "description": "Relax on serene beaches, explore lush rice terraces, and find spiritual tranquility in temples. Enjoy a memorable stay filled with culture, scenery, and unique local experiences. Take a yoga class in Ubud and chase waterfalls in the jungle.",
+  "startDate": {
+    "$date": "2025-12-05T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-12-26T00:00:00.000Z"
+  },
+  "price": 1700,
+  "imageName": "533dbbfa-96a5-46bc-b787-cfc374539c04.jpg"
+},
+{
+  "_id": {
+    "$oid": "6815f72bfe84794852e3611f"
+  },
+  "destination": "Reykjavik, Iceland",
+  "description": "Chase the northern lights, bathe in the Blue Lagoon, and hike near volcanoes and glaciers. Enjoy a memorable stay filled with culture, scenery, and unique local experiences. Drive the Golden Circle and warm up in natural geothermal springs.",
+  "startDate": {
+    "$date": "2025-05-03T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-10T00:00:00.000Z"
+  },
+  "price": 1100,
+  "imageName": "dab2dd37-881f-43c4-9853-44777d775af3.jpg"
+},
+{
+  "_id": {
+    "$oid": "5e2c2ecd0ada4e5f90d42c32"
+  },
+  "destination": "Cape Town, South Africa",
+  "description": "Table Mountain hikes, penguin beaches, and rich cultural experiences. Enjoy a memorable stay filled with culture, scenery, and unique local experiences. Tour the Cape Winelands and visit the penguins at Boulders Beach.",
+  "startDate": {
+    "$date": "2025-08-10T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-10-09T00:00:00.000Z"
+  },
+  "price": 1400,
+  "imageName": "c72f9aba-7ee8-4441-8e01-5374c99e6f0a.jpg"
+},
+{
+  "_id": {
+    "$oid": "530f2a67f4a14314866e4214"
+  },
+  "destination": "Sydney, Australia",
+  "description": "Opera House views, Bondi Beach surfing, and sunny harbor cruises. Enjoy a memorable stay filled with culture, scenery, and unique local experiences. Climb the Harbour Bridge and snorkel in crystal-clear waters of Manly.",
+  "startDate": {
+    "$date": "2025-09-10T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-10-03T00:00:00.000Z"
+  },
+  "price": 2600,
+  "imageName": "4ed9e99a-b9b5-4a14-89d8-13e0dccc125c.png"
+},
+{
+  "_id": {
+    "$oid": "54efe943e2bb41a498e7972d"
+  },
+  "destination": "Cusco & Machu Picchu, Peru",
+  "description": "Explore ancient Incan cities and breathtaking mountain landscapes. Enjoy a memorable stay filled with culture, scenery, and unique local experiences. Acclimate in Cusco’s cobbled streets before hiking the legendary Inca Trail.",
+  "startDate": {
+    "$date": "2025-06-18T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-07-05T00:00:00.000Z"
+  },
+  "price": 1500,
+  "imageName": "7f3cf1cc-debd-4a97-84d8-78ed7f76c22a.jpg"
+},
+{
+  "_id": {
+    "$oid": "2c410f9dbe284c329843ade6"
+  },
+  "destination": "Seoul, South Korea",
+  "description": "K-pop vibes, street food feasts, and futuristic cityscapes. Enjoy a memorable stay filled with culture, scenery, and unique local experiences. Explore palaces in Gyeongbokgung and taste Korean BBQ in lively night markets.",
+  "startDate": {
+    "$date": "2025-08-23T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-09-18T00:00:00.000Z"
+  },
+  "price": 1350,
+  "imageName": "eba5dc4b-8f85-45a7-803f-be219955b80c.webp"
+},
+{
+  "_id": {
+    "$oid": "c81ff01d33314bd6a7704494"
+  },
+  "destination": "Santorini, Greece",
+  "description": "Whitewashed houses, blue domes, and stunning sunset views. Enjoy a memorable stay filled with culture, scenery, and unique local experiences. Sail around volcanic cliffs and unwind in cliffside infinity pools.",
+  "startDate": {
+    "$date": "2025-08-20T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-08-27T00:00:00.000Z"
+  },
+  "price": 450,
+  "imageName": "05fb9271-383a-440b-9be6-12a3b2a44dac.jpg"
+},
+{
+  "_id": {
+    "$oid": "7c18ed3a78b34d7899e55f6c"
+  },
+  "destination": "Banff, Canada",
+  "description": "Crystal-clear lakes, towering peaks, and cozy mountain lodges. Enjoy a memorable stay filled with culture, scenery, and unique local experiences. Paddle Lake Louise and spot wildlife along scenic hiking trails.",
+  "startDate": {
+    "$date": "2025-09-05T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-10-06T00:00:00.000Z"
+  },
+  "price": 1200,
+  "imageName": "5c9d970f-365d-48b9-921c-fb9c68cfa328.webp"
+},
+{
+  "_id": {
+    "$oid": "68d4c5c1a3d1470bbedb122a"
+  },
+  "destination": "Dubai, UAE",
+  "description": "Luxury shopping, desert adventures, and the world’s tallest tower. Enjoy a memorable stay filled with culture, scenery, and unique local experiences. Ski indoors at the mall and ride camels through golden sand dunes.",
+  "startDate": {
+    "$date": "2025-08-06T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-08-15T00:00:00.000Z"
+  },
+  "price": 500,
+  "imageName": "5b763ed6-a0e9-4fdf-a974-9f523d2bca22.jpg"
+},
+{
+  "_id": {
+    "$oid": "732dc54daf7e44d8a09477af"
+  },
+  "destination": "Hanoi, Vietnam",
+  "description": "Bustling markets, ancient temples, and tranquil Halong Bay tours. Enjoy a memorable stay filled with culture, scenery, and unique local experiences. Sip egg coffee in the Old Quarter and cruise among limestone karsts in Halong Bay.",
+  "startDate": {
+    "$date": "2025-07-18T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-08-05T00:00:00.000Z"
+  },
+  "price": 1400,
+  "imageName": "a9b06687-e2c1-43db-9d7a-19e3398c78b8.jpg"
+},
+{
+  "_id": {
+    "$oid": "687b46bc313613a7a1314ca5"
+  },
+  "destination": "Tel Aviv, Israel",
+  "description": "Vibrant Mediterranean city with lively beaches, rich nightlife, and a thriving culinary scene. Explore markets, Bauhaus architecture, and sunset promenades!. Enjoy a memorable stay filled with culture, scenery, and unique local experiences. Relax on Gordon Beach and explore the street art of Florentin.",
+  "startDate": {
+    "$date": "2025-07-20T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-07-26T00:00:00.000Z"
+  },
+  "price": 750,
+  "imageName": "2aa04588-b89d-44ce-b4af-e0b862f7c732.jpg"
+}]

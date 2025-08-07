@@ -1,0 +1,189 @@
+/* Modern Header with Blue Color Palette */
+.Header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #3b82f6 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Admin Header - Special styling */
+.HeaderAdmin {
+    background: linear-gradient(135deg, #010025 0%, #292ec2 50%, #0b3ad2 70%, #0d031b 100%);
+}
+/* Header Content Container */
+.HeaderContent {
+    text-align: left;
+    z-index: 2;
+    position: relative;
+}
+
+/* Logo/Brand Section */
+.Header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Admin Badge */
+.AdminBadge {
+    font-size: 0.6rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.AdminBadge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+/* Header Icon */
+.HeaderIcon {
+    font-size: 2rem;
+}
+
+
+/* Header Description */
+.HeaderDescription {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0.5rem 0 0 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+    font-style: italic;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+/* Admin Header Description */
+.HeaderAdmin .HeaderDescription {
+    font-weight: 500;
+    font-style: normal;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Background decoration elements */
+.Header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.Header::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Header {
+        padding: 1rem 1.5rem;
+    }
+    
+    .Header h1 {
+        font-size: 2rem;
+    }
+    
+    .HeaderIcon {
+        font-size: 1.5rem;
+    }
+    
+    .HeaderDescription {
+        font-size: 0.9rem;
+    }
+    
+    .AdminBadge {
+        font-size: 0.5rem;
+        padding: 0.2rem 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Header {
+        padding: 1rem;
+    }
+    
+    .Header h1 {
+        font-size: 1.8rem;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .HeaderContent{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 60px;
+        margin-left: 25%;
+        
+    }
+    
+    .HeaderIcon {
+        font-size: 1.3rem;
+    }
+    
+    .HeaderDescription {
+        font-size: 0.8rem;
+    }
+    
+    .AdminBadge {
+        font-size: 0.4rem;
+        padding: 0.1rem 0.4rem;
+        margin-top: 0.2rem;
+    }
+}
+
+/* Glass morphism effect overlay */
+.Header {
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.HeaderAdmin {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}

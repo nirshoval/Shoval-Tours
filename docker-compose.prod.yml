@@ -1,0 +1,96 @@
+services:
+
+  # Database service:
+  database-service:
+
+    # Image name:
+    image: nirsho2/vacations-database-image:1.0
+
+    # Dockerfile location:
+    build: ./Database
+
+    # Container name:
+    container_name: vacations-database-container
+
+    # Restart:
+    restart: unless-stopped
+
+    # Volumes:
+    volumes:
+      - vacations-volume:/data/db # For MongoDB
+
+    # Test that the database ready to use and works fine:
+    healthcheck:
+      test: [ "CMD", "mongosh", "--eval", "db.adminCommand('ping')" ]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+
+  # -------------------------------------------------------------------
+
+  backend-service:
+
+    # On which other service + healthcheck we're depending on:
+    depends_on:
+      database-service:
+        condition: service_healthy # Wait until Health-check passes, before starting this container.
+
+    # Create image:
+    image: nirsho2/vacations-backend-image:1.0
+
+    # The Dockerfile.prod location:
+    build: 
+      context: ./Backend
+      dockerfile: Dockerfile.prod
+
+    # Create container:
+    container_name: vacations-backend-container
+
+    # Port mapping (host-port:container-port):
+    ports:
+      - 4001:4000
+
+    # Restart policy:
+    restart: unless-stopped
+
+    # Environment variables to override .env file:
+    environment:
+      MONGO_CONNECTION_STRING: "mongodb://database-service:27017/vacations"
+
+    # host-volume:
+    volumes:
+      - images-volume:/app/1-assets/images
+
+  # ---------------------------------------------
+
+  frontend-service:
+
+    # On which service we're depending on:
+    depends_on:
+      - backend-service
+
+    # Image name:
+    image: nirsho2/vacations-frontend-image:1.0
+
+    # The Dockerfile.prod location:
+    build: 
+      context: ./Frontend
+      dockerfile: Dockerfile.prod
+
+    # Container name:
+    container_name: vacations-frontend-container
+
+    # Port mapping (host-port:container-port):
+    ports:
+      - 80:80 # ---------------------
+
+    # Restart policy:
+    restart: unless-stopped
+
+# -------------------------------------------------------------------
+
+
+# List all named-volumes (Only for named volumes):
+volumes:
+  images-volume:
+  vacations-volume:

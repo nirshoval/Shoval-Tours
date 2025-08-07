@@ -1,0 +1,76 @@
+
+.ChartContainer {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    margin-top: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+}
+
+.ChartContainer::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+    border-radius: 20px 20px 0 0;
+}
+
+.ChartContainer .MuiChartsAxis-root {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ChartContainer .MuiChartsAxis-tickLabel {
+    fill: #64748b;
+    font-weight: 500;
+}
+
+.ChartContainer .MuiChartsAxis-line {
+    stroke: #e2e8f0;
+    stroke-width: 2;
+}
+
+.ChartContainer .MuiChartsAxis-tick {
+    stroke: #cbd5e1;
+    stroke-width: 1;
+}
+
+/* Chart legend styling */
+.ChartContainer .MuiChartsLegend-root {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ChartContainer .MuiChartsLegend-label {
+    fill: #475569;
+    font-weight: 600;
+}
+
+/* Bar styling through CSS variables */
+.ChartContainer {
+    --mui-charts-color-palette-primary: #667eea;
+    --mui-charts-color-palette-secondary: #764ba2;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    
+    .ChartContainer {
+        max-width: 100%;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .ChartContainer {
+        padding: 0.5rem;
+        border-radius: 16px;
+    }
+}

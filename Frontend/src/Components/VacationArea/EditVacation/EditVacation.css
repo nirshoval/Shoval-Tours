@@ -1,0 +1,359 @@
+.EditVacation {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #385cff 0%, #b99ed5 100%);
+    padding: 40px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.edit-vacation-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 48px 40px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.edit-vacation-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.edit-vacation-title {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    color: #1a1a1a !important;
+    margin: 0 0 8px 0 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.edit-vacation-subtitle {
+    font-size: 1.4rem !important;
+    color: #6b7280 !important;
+    margin: 0 !important;
+    font-weight: 400 !important;
+}
+
+.edit-vacation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Loading State */
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    color: #6b7280;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(56, 92, 255, 0.3);
+    border-top: 3px solid #385cff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* MUI TextField Customization */
+.mui-textfield .MuiOutlinedInput-root {
+    border-radius: 12px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    transition: all 0.2s ease !important;
+}
+
+.mui-textfield .MuiOutlinedInput-root:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 92, 255, 0.15) !important;
+}
+
+.mui-textfield .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #385cff !important;
+}
+
+.mui-textfield .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #385cff !important;
+    border-width: 2px !important;
+    box-shadow: 0 0 0 3px rgba(56, 92, 255, 0.1) !important;
+}
+
+.mui-textfield .MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline {
+    border-color: #ef4444 !important;
+    border-width: 2px !important;
+}
+
+.mui-textfield .MuiOutlinedInput-root.Mui-error:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #dc2626 !important;
+}
+
+.mui-textfield .MuiInputLabel-root {
+    font-weight: 600 !important;
+    color: #374151 !important;
+    font-size: 1rem !important;
+    letter-spacing: -0.01em !important;
+}
+
+.mui-textfield .MuiInputLabel-root.Mui-focused {
+    color: #385cff !important;
+}
+
+.mui-textfield .MuiInputLabel-root.Mui-error {
+    color: #ef4444 !important;
+}
+
+.mui-textfield .MuiOutlinedInput-input {
+    padding: 16px 20px !important;
+    font-size: 1rem !important;
+}
+
+.mui-textfield .MuiOutlinedInput-notchedOutline {
+    border-color: #e5e7eb !important;
+    border-width: 2px !important;
+}
+
+.mui-textfield .MuiFormHelperText-root {
+    font-weight: 500 !important;
+    margin-left: 4px !important;
+    margin-top: 8px !important;
+}
+
+.mui-textfield .MuiFormHelperText-root.Mui-error {
+    color: #ef4444 !important;
+}
+
+/* Date Field Specific Styling */
+.date-field .MuiInputLabel-root {
+    transform: translate(14px, -20px) scale(0.75) !important;
+}
+
+.date-field .MuiInputLabel-root.MuiInputLabel-shrink {
+    transform: translate(14px, -10px) scale(0.75) !important;
+}
+
+/* Image Upload Section */
+.image-upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.image-section-title {
+    font-weight: 600 !important;
+    color: #374151 !important;
+}
+
+.image-picker {
+    width: 280px;
+    border: 3px dashed #d1d5db;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    background: rgba(249, 250, 251, 0.8);
+}
+
+.image-picker:hover {
+    border-color: #385cff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(56, 92, 255, 0.15);
+}
+
+.image-picker.error {
+    border-color: #ef4444;
+    background: rgba(254, 242, 242, 0.8);
+}
+
+.image-preview {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 12px;
+}
+
+.image-picker:hover .image-overlay {
+    opacity: 1;
+}
+
+.upload-text {
+    color: white !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    padding: 0 16px !important;
+}
+
+.image-error {
+    color: #ef4444 !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+}
+
+.image-help-text {
+    color: #6b7280 !important;
+    text-align: center !important;
+    font-size: 1rem !important;
+}
+
+.hidden-input {
+    display: none;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cancel-button {
+    background: rgba(107, 114, 128, 0.1) !important;
+    color: #6b7280 !important;
+    border: 2px solid #d1d5db !important;
+    border-radius: 12px !important;
+    padding: 18px 32px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.01em !important;
+    transition: all 0.2s ease !important;
+    text-transform: none !important;
+}
+
+.cancel-button:hover:not(:disabled) {
+    background: rgba(107, 114, 128, 0.15) !important;
+    border-color: #9ca3af !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(107, 114, 128, 0.15) !important;
+}
+
+.edit-vacation-button {
+    background: linear-gradient(135deg, #10b981 0%, #34d399 100%) !important;
+    color: white !important;
+    border: none !important;
+    padding: 18px 32px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    border-radius: 12px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    letter-spacing: -0.01em !important;
+    text-transform: none !important;
+    box-shadow: none !important;
+}
+
+.edit-vacation-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3) !important;
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%) !important;
+}
+
+.edit-vacation-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .EditVacation {
+        padding: 20px 10px;
+    }
+    
+    .edit-vacation-container {
+        padding: 32px 24px;
+        border-radius: 16px;
+        max-width: 100%;
+    }
+    
+    .edit-vacation-title {
+        font-size: 2rem !important;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .mui-textfield .MuiOutlinedInput-input {
+        padding: 14px 16px !important;
+    }
+    
+    .image-picker {
+        width: 100%;
+        max-width: 300px;
+        height: 200px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cancel-button,
+    .edit-vacation-button {
+        width: 100%;
+        max-width: 250px;
+        padding: 16px 24px !important;
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .edit-vacation-header {
+        margin-bottom: 30px;
+    }
+    
+    .edit-vacation-subtitle {
+        font-size: 1rem !important;
+    }
+    
+    .image-picker {
+        height: 160px;
+    }
+}

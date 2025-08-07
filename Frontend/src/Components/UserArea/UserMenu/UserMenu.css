@@ -1,0 +1,206 @@
+.UserMenu {
+	position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: x-large;
+}
+
+/* Modern UserMenu with Blue Color Palette */
+.UserMenu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1e40af;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* UserMenu hover effect */
+.UserMenu:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(59, 130, 246, 0.2);
+}
+
+/* Guest user styling */
+.UserMenu div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+/* User greeting text */
+.UserMenu span {
+    color: #1e40af;
+    font-weight: 600;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* User Icons */
+.UserIcon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+/* Wave animation for greeting icon */
+.UserIcon:first-child {
+    animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(20deg); }
+    75% { transform: rotate(-20deg); }
+}
+
+/* Links styling */
+.UserMenu a {
+    color: #2563eb;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* Link hover effects */
+.UserMenu a:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.UserMenu a:hover .UserIcon {
+    transform: scale(1.1);
+}
+
+/* Separator styling */
+.UserMenuSeparator {
+    color: rgba(30, 64, 175, 0.4);
+    font-weight: 300;
+    margin: 0 0.3rem;
+}
+
+/* Logged-in user specific styling */
+.UserMenu div:has(a[href="/home"][onclick]) span {
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+/* Logout button special styling */
+.UserMenu a[href="/home"][onclick] {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(239, 68, 68, 0.05) 100%);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    color: #dc2626;
+}
+
+.UserMenu a[href="/home"][onclick]:hover {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .UserMenu {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 20px;
+        right: 20px;
+        font-size: 0.9rem;
+        padding: 0.8rem 1rem;
+        border-radius: 20px;
+        max-width: calc(100vw - 20px);
+        box-sizing: border-box;
+    }
+    
+    .UserMenu div {
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        justify-content: center;
+    }
+    
+    .UserIcon {
+        font-size: 1rem;
+    }
+    
+    .UserMenu a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .UserMenu {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        top: 5px;
+        right: 5px;
+        margin: 0;
+        border-radius: 15px;
+        padding: 0.6rem 0.8rem;
+        min-width: 100px;
+        max-height: 100px;
+    }
+    
+    .UserMenu div {
+        flex-direction: row;
+        text-align: center;
+    }
+}
+
+/* Animation for user menu appearance */
+.UserMenu {
+    animation: fadeInSlide 0.5s ease-out;
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateX(20px) translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+}
+
+/* Subtle pulse animation for logged-in users */
+.UserMenu div:has(a[href="/home"][onclick]) {
+    animation: subtlePulse 3s ease-in-out infinite;
+}
+
+@keyframes subtlePulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.9; }
+}
+
+/* Glass morphism enhancement */
+.UserMenu {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}

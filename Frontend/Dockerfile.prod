@@ -1,0 +1,41 @@
+# Multi-stage builds: Dockerfile containing multiple stage builds which is needed due to different images required for every stage.
+
+# First stage - inherit current image from an Alpine image containing node:
+FROM node:20-alpine3.19 AS compilation-stage
+
+# Create a temporary empty directory for project files and set it as the Current Directory:
+WORKDIR /tmp
+
+# Copy local package.json & package-lock.json into /tmp:
+COPY package*.json /tmp
+
+# Install npm dependencies & devDependencies (required by TypeScript compiler):
+RUN npm i
+
+# Copy project local files (first dot) into /tmp:
+COPY . /tmp
+
+# Create React environment variable stating that we're in production environment (will be used in AppConfig).
+# Note: (1) any react environment variable must start with REACT_APP_ (2) any react environment variable must be created before npm run build:
+ENV REACT_APP_ENVIRONMENT=production
+
+# Create React environment variable containing production backend base url (will be used in AppConfig).
+# Note: change it to the real production backend base url when site is on the air:
+ENV REACT_APP_BACKEND_BASE_URL=http://localhost:4001
+
+# Compile project resides in /tmp (WORKDIR) which generates final react files inside /tmp/build per React build process:
+RUN npm run build
+
+# -----------------------------------------------------------------------
+
+# Second stage - will run after first stage and will overrun it after completion:
+FROM nginx:1-alpine3.18 AS production-stage
+
+# Copy build files from previous stage's /tmp/build folder into Nginx special web-expose folder:
+COPY --from=compilation-stage /tmp/build /usr/share/nginx/html
+
+# Fix Nginx default.conf so it will serve a SPA website (redirect any 404 to index.html):
+RUN sed -i '/index  index.html index.htm;/a \        proxy_intercept_errors on;\n        error_page 404 = /index.html;'  /etc/nginx/conf.d/default.conf
+
+# Execute 'nginx -g "daemon off;"' when container starts which tells Nginx to serve index.html:
+ENTRYPOINT nginx -g "daemon off;"

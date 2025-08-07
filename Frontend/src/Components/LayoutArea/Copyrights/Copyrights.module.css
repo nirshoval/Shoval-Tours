@@ -1,0 +1,170 @@
+/* Modern Copyrights/Footer with Blue Color Palette */
+.Centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    min-height: 80px;
+    gap: 0.5rem;
+}
+
+/* Main copyright text */
+.Dark {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Tagline text */
+.Tagline {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Copyright Icon */
+.CopyrightIcon {
+    font-size: 1.2rem;
+}
+
+
+/* Background decoration elements */
+.Centered::before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.Centered::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, rgba(147, 197, 253, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 4s ease-in-out infinite reverse;
+}
+
+/* Floating animation for decoration */
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px) scale(1);
+        opacity: 0.5;
+    }
+    50% { 
+        transform: translateY(-10px) scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* Add subtle pattern overlay */
+.Centered {
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Centered {
+        padding: 1rem;
+        min-height: 70px;
+        gap: 0.3rem;
+    }
+    
+    .Dark {
+        font-size: 0.9rem;
+    }
+    
+    .Tagline {
+        font-size: 0.8rem;
+    }
+    
+    .CopyrightIcon {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Centered {
+        padding: 0.8rem;
+        min-height: 60px;
+    }
+    
+    .Dark {
+        font-size: 0.8rem;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    
+    .Tagline {
+        font-size: 0.75rem;
+    }
+    
+    .CopyrightIcon {
+        font-size: 1rem;
+    }
+}
+
+/* Hover effects */
+.Centered:hover .CopyrightIcon {
+    animation-duration: 2s;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+.Centered:hover::before,
+.Centered:hover::after {
+    animation-duration: 3s;
+}
+
+/* Glass morphism effect */
+.Centered {
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+}
+
+/* Subtle pulsing effect */
+.Dark {
+    animation: subtleGlow 4s ease-in-out infinite;
+}
+
+@keyframes subtleGlow {
+    0%, 100% { 
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    50% { 
+        text-shadow: 
+            0 2px 4px rgba(0, 0, 0, 0.3),
+            0 0 20px rgba(255, 255, 255, 0.2);
+    }
+}

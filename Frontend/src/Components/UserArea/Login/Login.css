@@ -1,0 +1,184 @@
+.Login {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #385cff 0%, #b99ed5 100%);
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 48px 40px;
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.login-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.02em;
+}
+
+.login-header p {
+    font-size: 1.1rem;
+    color: #6b7280;
+    margin: 0;
+    font-weight: 400;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* MUI TextField Customization */
+.mui-textfield .MuiOutlinedInput-root {
+    border-radius: 12px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    transition: all 0.2s ease !important;
+}
+
+.mui-textfield .MuiOutlinedInput-root:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 92, 255, 0.15) !important;
+}
+
+.mui-textfield .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #385cff !important;
+}
+
+.mui-textfield .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #385cff !important;
+    border-width: 2px !important;
+    box-shadow: 0 0 0 3px rgba(56, 92, 255, 0.1) !important;
+}
+
+.mui-textfield .MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline {
+    border-color: #ef4444 !important;
+    border-width: 2px !important;
+}
+
+.mui-textfield .MuiOutlinedInput-root.Mui-error:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #dc2626 !important;
+}
+
+.mui-textfield .MuiInputLabel-root {
+    font-weight: 500 !important;
+    color: #374151 !important;
+    font-size: 1rem !important;
+    letter-spacing: -0.01em !important;
+}
+
+.mui-textfield .MuiInputLabel-root.Mui-focused {
+    color: #385cff !important;
+}
+
+.mui-textfield .MuiInputLabel-root.Mui-error {
+    color: #ef4444 !important;
+}
+
+.mui-textfield .MuiOutlinedInput-input {
+    padding: 16px 20px !important;
+    font-size: 1rem !important;
+}
+
+.mui-textfield .MuiOutlinedInput-notchedOutline {
+    border-color: #e5e7eb !important;
+    border-width: 2px !important;
+}
+
+.mui-textfield .MuiFormHelperText-root {
+    font-weight: 500 !important;
+    margin-left: 4px !important;
+    margin-top: 8px !important;
+}
+
+.mui-textfield .MuiFormHelperText-root.Mui-error {
+    color: #ef4444 !important;
+}
+
+.login-button {
+    background: linear-gradient(135deg, #385cff 0%, #b99ed5 100%);
+    color: white;
+    border: none;
+    padding: 18px 24px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 8px;
+    letter-spacing: -0.01em;
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(56, 92, 255, 0.3);
+}
+
+.login-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(56, 92, 255, 0.2);
+}
+
+
+.register-link {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.register-link p {
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.register-link a {
+    color: #385cff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.register-link a:hover {
+    color: #2c47d9;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    
+    .login-container {
+        padding: 32px 24px;
+        border-radius: 16px;
+    }
+    
+    .login-header h1 {
+        font-size: 2rem;
+    }
+    
+    .mui-textfield .MuiOutlinedInput-input {
+        padding: 14px 16px !important;
+    }
+    
+    .login-button {
+        padding: 16px 20px;
+        font-size: 1rem;
+    }
+}

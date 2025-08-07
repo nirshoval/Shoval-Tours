@@ -1,0 +1,41 @@
+
+/* Scroll to Top Button */
+.scroll-to-top-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #3b82f6 100%);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    animation: fadeInUp 0.3s ease-out;
+}
+
+.scroll-to-top-button:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(30, 64, 175, 0.4);
+    background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #3b82f6 100%);
+}
+
+.scroll-to-top-button:active {
+    transform: translateY(-2px) scale(0.98);
+    box-shadow: 0 6px 20px rgba(30, 64, 175, 0.5);
+}
+
+.scroll-to-top-button svg {
+    transition: transform 0.3s ease;
+}
+
+.scroll-to-top-button:hover svg {
+    transform: translateY(-2px);
+}

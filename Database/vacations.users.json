@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "680b867e9882b415b6111d5d"
+  },
+  "firstName": "Nir",
+  "lastName": "Shoval",
+  "email": "nirshoval2@gmail.com",
+  "password": "4f8d702d0c1e98bf17ca98e2b182d85eda75cac8774ef84c4edd52093c2edd08c463e7b3ba09b93bb18c7458ca300d1885092d33724a6c9c5802093f13464df4",
+  "roleId": 1
+},
+{
+  "_id": {
+    "$oid": "687a16455577d41caddc209b"
+  },
+  "firstName": "Tal",
+  "lastName": "Korpachev",
+  "email": "tal.korpachev@gmail.com",
+  "password": "4f8d702d0c1e98bf17ca98e2b182d85eda75cac8774ef84c4edd52093c2edd08c463e7b3ba09b93bb18c7458ca300d1885092d33724a6c9c5802093f13464df4",
+  "roleId": 2
+},
+{
+  "_id": {
+    "$oid": "687b5ba9313613a7a13153f5"
+  },
+  "firstName": "Assaf",
+  "lastName": "Finkelshtein",
+  "email": "assaf.fink@gmail.com",
+  "password": "2f52eb5b9b8853efd8dedfccb9fbe0fd60f31c6fff3303500dc17c5783053b29befd6bdd4cea4ac78c7da2336c83eeff7246e583aa47eb139ff8cf824a34da89",
+  "roleId": 2
+},
+{
+  "_id": {
+    "$oid": "687b6da7294a1a5d8e96f78f"
+  },
+  "firstName": "Guy",
+  "lastName": "Siri",
+  "email": "guy@gmail.com",
+  "password": "4f8d702d0c1e98bf17ca98e2b182d85eda75cac8774ef84c4edd52093c2edd08c463e7b3ba09b93bb18c7458ca300d1885092d33724a6c9c5802093f13464df4",
+  "roleId": 2
+}]

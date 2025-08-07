@@ -1,0 +1,144 @@
+ /* Modern Menu with Blue Color Palette */
+.Menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background: linear-gradient(135deg, #dbeafe 0%, #cae0fb 100%);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Navigation Links - ALL buttons use the same styling */
+.Menu a {
+    color: #1e40af;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Menu Icons */
+.MenuIcon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effects for ALL links */
+.Menu a:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+.Menu a:hover .MenuIcon {
+    transform: scale(1.1);
+}
+
+/* Active link styling for ALL buttons */
+.Menu a.active {
+    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(30, 64, 175, 0.4);
+}
+
+/* Separator styling */
+.MenuSeparator {
+    color: rgba(30, 64, 175, 0.4);
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Menu {
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+        justify-content: center;
+    }
+    
+    .Menu a {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .MenuSeparator {
+        display: none;
+    }
+    
+    .MenuIcon {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Menu {
+        padding: 0.6rem 0.8rem;
+        border-radius: 10px;
+    }
+    
+    .Menu a {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.85rem;
+        border-radius: 8px;
+    }
+    
+    .MenuIcon {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animation for menu items */
+.Menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    transition: width 0.3s ease;
+}
+
+.Menu a:hover::after,
+.Menu a.active::after {
+    width: 100%;
+}
+
+/* Subtle glow effect on hover */
+.Menu a:hover {
+    box-shadow: 
+        0 8px 25px rgba(59, 130, 246, 0.3),
+        0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+/* Loading animation for menu */
+.Menu {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

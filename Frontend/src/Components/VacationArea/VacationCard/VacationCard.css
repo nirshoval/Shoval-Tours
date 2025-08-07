@@ -1,0 +1,217 @@
+.VacationCard {
+    width: 100%;
+    max-width: 350px;
+    height: 500px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(59, 130, 246, 0.1);
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.VacationCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+}
+
+.ImageContainer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    height: 200px;
+    flex-shrink: 0;
+}
+
+.ImageContainer img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.VacationCard:hover .ImageContainer img {
+    transform: scale(1.05);
+}
+
+.ButtonsTopLeft {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.ButtonsTopLeft a , button {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    color: #1e40af;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ButtonsTopLeft a:hover , button:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+}
+
+/* MUI Chip styling for like button */
+.ButtonsTopLeft .MuiChip-root {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #1e40af;
+}
+
+.ButtonsTopLeft .MuiChip-root:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+}
+
+.DestinationTitle {
+    position: relative;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, rgba(30, 64, 175, 0.9) 0%, rgba(59, 130, 246, 0.9) 100%);
+    color: #fff;
+    flex-shrink: 0;
+    text-align: center;
+    padding: 15px 20px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.Dates {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    color: #1e40af;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    gap: 8px;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.Description {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    color: #475569;
+    flex: 1; 
+    line-height: 1.5;
+    overflow-y: auto;
+    text-align: center;
+    min-height: 50px;
+}
+
+/* Custom scrollbar for description */
+.Description::-webkit-scrollbar {
+    width: 6px;
+}
+
+.Description::-webkit-scrollbar-track {
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 3px;
+}
+
+.Description::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    border-radius: 3px;
+}
+
+.Description::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+}
+
+.Price {
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    padding: 18px;
+    font-weight: 700;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.Price::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.VacationCard:hover .Price::before {
+    left: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .VacationCard {
+        max-width: 100%;
+        margin: 0 auto;
+        height: 480px;
+    }
+
+    .ImageContainer img {
+        height: 180px;
+    }
+
+    .ButtonsTopLeft {
+        top: 10px;
+        left: 10px;
+        gap: 8px;
+    }
+
+    .ButtonsTopLeft a , button {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+
+    .DestinationOverlay {
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+
+    .Description {
+        padding: 15px;
+        max-height: 100px;
+        font-size: 13px;
+    }
+
+    .Price {
+        font-size: 20px;
+        padding: 15px;
+    }
+}
